@@ -11,7 +11,7 @@ FAKE_DB_CAROUSEL = [
 ]
 
 def home_view(request):
-    page_title = "Django"
+    page_title = "Django",
     context = dict(
         page_title=page_title,
         FAKE_DB_PROJECTS=FAKE_DB_PROJECTS,
