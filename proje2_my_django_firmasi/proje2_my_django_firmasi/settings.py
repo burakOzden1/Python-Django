@@ -129,8 +129,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # TASKS:
-# TODO: AnaSayfa'yi Goster
-# TODO: Hakkimizda, Iletisim Gibi Sayfalar Icin View olustur
+# DONE: AnaSayfa'yi Goster
+# DONE: Hakkimizda, Iletisim Gibi Sayfalar Icin View olustur
 # TODO: createsuperuser ile Admin/Superuser olustur
 # TODO: Django makemigrations & migrate 
 # TODO: D.T.L. Base Yapisini Olustur
