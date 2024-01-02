@@ -1,6 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from random import randint
+from .fake_db.pages import FAKE_DB_PAGES
 
 FAKE_DB_PROJECTS = [
     f"https://picsum.photos/id/{id}/100/80" for id in range(21, 29)
@@ -46,3 +47,14 @@ def contact_us_view(request):
         FAKE_DB_PROJECTS=FAKE_DB_PROJECTS,
     )
     return render(request, 'page/contact_us.html', context)
+
+def page_view(request, slug):
+    result = list(filter(lambda x: (x['url'] == slug), FAKE_DB_PAGES))
+    if result:
+        context = dict(
+            page_title = result[0]["title"],
+            FAKE_DB_PROJECTS=FAKE_DB_PROJECTS,
+            detail = result[0]["detail"]
+        )
+        return render(request, 'page/page_detail.html', context)
+    raise Http404
