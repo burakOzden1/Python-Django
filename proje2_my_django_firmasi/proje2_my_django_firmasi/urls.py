@@ -20,6 +20,6 @@ from page.views import home_view, about_us_view, contact_us_view, vision_view
 
 # Danisma
 urlpatterns = [
-    path('', include('page.urls')),
+    path('', include('page.urls.py')),
     path('admin/', admin.site.urls),
 ]
