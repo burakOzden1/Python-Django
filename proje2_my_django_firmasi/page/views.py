@@ -1,14 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from random import randint
 
 def home(request):
-    return HttpResponse('Ana Sayfaya Hoşgeldiniz..')
-
-def urunler(request):
-    return HttpResponse('Ürünler Sayfasına Hoşgeldiniz..')
-
-def hakkimizda(request):
-    return HttpResponse('Hakkımızda Sayfasına Hoşgeldiniz..')
-
-def iletisim(request):
-    return HttpResponse('İletişim Sayfasına Hoşgeldiniz..')
+    context = {"platform": f"Django Platformu Kullanildi ve randint ile donen veri {randint(1, 100)}"}
+    return render(request, 'page/home_page.html', context)

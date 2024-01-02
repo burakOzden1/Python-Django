@@ -16,13 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from page.views import home, urunler,hakkimizda, iletisim
+from page.views import home
 
 # Danisma
 urlpatterns = [
-    path('iletisim/', iletisim),
-    path('hakkimizda/', hakkimizda),
-    path('urunler/', urunler),
     path('', home),
     path('admin/', admin.site.urls),
 ]
