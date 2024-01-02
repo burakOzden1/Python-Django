@@ -125,3 +125,19 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+# TASKS:
+# TODO: AnaSayfa'yi Goster
+# TODO: Hakkimizda, Iletisim Gibi Sayfalar Icin View olustur
+# TODO: createsuperuser ile Admin/Superuser olustur
+# TODO: Django makemigrations & migrate 
+# TODO: D.T.L. Base Yapisini Olustur
+# TODO: HTML Dosyalarini Olustur
+# TODO: (Don't repeat yourself (DRY ...)
+# TODO: AnaSayfadaki Karisik Yapidan Kurtul!
+# TODO: App icin urls.py olustur
+# TODO: Statik Dosyalari Calistir
+# TODO: Sayfalari Fake DB icerisinde tutup SLUG ile cagirmaya calisalim..
+# TODO: Baska Bir App ekleyeyip Moduler Yapiyi anlamaya calisalim
