@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # My Apps:
-    'page'
+    'page',
+    'product',
 
 ]
 
@@ -58,7 +59,9 @@ ROOT_URLCONF = 'proje2_my_django_firmasi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            BASE_DIR / 'templates',
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -66,6 +69,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'proje2_my_django_firmasi.project_context_processors.global_context'
             ],
         },
     },
@@ -136,12 +140,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # DONE: AnaSayfa'yi Goster
 # DONE: Hakkimizda, Iletisim Gibi Sayfalar Icin View olustur
 # DONE: createsuperuser ile Admin/Superuser olustur
-# TODO: Django makemigrations & migrate 
-# TODO: D.T.L. Base Yapisini Olustur
-# TODO: HTML Dosyalarini Olustur
-# TODO: (Don't repeat yourself (DRY ...)
-# TODO: AnaSayfadaki Karisik Yapidan Kurtul!
-# TODO: App icin urls.py olustur
-# TODO: Statik Dosyalari Calistir
-# TODO: Sayfalari Fake DB icerisinde tutup SLUG ile cagirmaya calisalim..
-# TODO: Baska Bir App ekleyeyip Moduler Yapiyi anlamaya calisalim
+# DONE: Django makemigrations & migrate 
+# DONE: D.T.L. Base Yapisini Olustur
+# DONE: HTML Dosyalarini Olustur
+# DONE: (Don't repeat yourself (DRY ...)
+# DONE: AnaSayfadaki Karisik Yapidan Kurtul!
+# DONE: App icin urls.py olustur
+# DONE: Statik Dosyalari Calistir
+# DONE: Sayfalari Fake DB icerisinde tutup SLUG ile cagirmaya calisalim..
+# TODO: Baska Bir App ekleyip Moduler Yapiyi anlamaya calisalim

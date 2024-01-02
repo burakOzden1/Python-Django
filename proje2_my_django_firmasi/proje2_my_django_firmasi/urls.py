@@ -19,6 +19,7 @@ from django.urls import path, include
 
 # Danisma
 urlpatterns = [
-    path('', include('page.urls')),
+    path('urunler/', include('product.urls'), ),
     path('admin/', admin.site.urls),
+    path('', include('page.urls')),
 ]
