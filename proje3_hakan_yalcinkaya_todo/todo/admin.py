@@ -2,6 +2,14 @@ from django.contrib import admin
 from .models import Todo, category
 
 
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = [
+        'pk',
+        'title',
+        'is_active',
+    ]
+
+
 class TodoAdmin(admin.ModelAdmin):
     list_display = [
         'pk',
@@ -20,4 +28,4 @@ class TodoAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Todo, TodoAdmin)
-admin.site.register(category)
+admin.site.register(category, CategoryAdmin)
