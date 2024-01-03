@@ -49,4 +49,12 @@ todos = Todo.objects.exclude(title__icontains="django")
 for item in todos:
     item.title = f"{item.title} - Django"
     item.save()
+
+
+# id ile eleman cekme
+
+from todo.models import Todo
+
+Todo.objects.get(id=1)
+Todo.objects.get(pk=1) # ikiside ayni sonucu verir, pk = primary key
 ```
