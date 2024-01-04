@@ -7,8 +7,10 @@
     {% for tasks in object_list %}
 
     <tr>
-        <td>{{ tasks.title }}</td>
-        <td><a href="{% url 'task-detail' tasks.id %}">Göreve Git</a></td>
+        <td>{{ tasks.id }} - {{ tasks.title }}</td>
+        <td><a href="{% url 'task-detail' tasks.id %}">Görüntüle</a></td>
+        <td><a href="{% url 'task-update' tasks.id %}">Düzenle</a></td>
+        <td><a href="{% url 'task-delete' tasks.id %}">Sil</a></td>
     </tr>
 
     {% empty %}
@@ -16,4 +18,6 @@
     <a href="">Görev Ekle</a>
 
     {% endfor %}
+
+    <td><a href="{% url 'task-create' %}">Ekle</a></td>
 </table>
