@@ -131,11 +131,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
 # TASKS:
-# TODO: Anasayfa yapimiz projeye eklendi(todo/views.py icerisine anasayfa fonk. yazildi, todo/urls.py icerisinden bu fonk. cagirildi.).
-# TODO: Ayrica bu islemler todolist/urls.py icerisine de include edildi
-# TODO: Anasayfa uzerinde "Working" ifadesi goruldu.
-# TODO:
-# TODO:
+# DONE: Anasayfa yapimiz projeye eklendi(todo/views.py icerisine anasayfa fonk. yazildi, todo/urls.py icerisinden bu fonk. cagirildi.).
+# DONE: Ayrica bu islemler todolist/urls.py icerisine de include edildi
+# DONE: Anasayfa uzerinde "Working" ifadesi goruldu.
+# DONE: todo/models.py uzerinden admin panelimize todo yapisini ekledik
+# DONE: admin panele ekledigimiz todo yapisinin gorunun olmasi icin todo/admin.py icerisinden todo/models.py icerisindeki Task class'ini cagirdik.
 # TODO:
 # TODO:
 # TODO:
