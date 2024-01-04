@@ -1,1 +1,18 @@
 <h1>Benim Todo List'im</h1>
+
+<table>
+    <tr>
+        <th>Görevler</th>
+    </tr>
+    {% for task in object_list %}
+
+    <tr>
+        <td>{{ task.title }}</td>
+    </tr>
+
+    {% empty %}
+    <h3>Listelenecek Görev Bulunamadı.</h3>
+    <a href="">Görev Ekle</a>
+
+    {% endfor %}
+</table>
