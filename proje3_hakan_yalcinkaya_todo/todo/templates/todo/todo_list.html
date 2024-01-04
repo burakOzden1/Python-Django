@@ -5,7 +5,7 @@
 <div class="col-sm-6 offset-sm-3">
     <h1 class="text-primary">TODO LIST ( {{ todos.count }} )</h1>
     {% if category %}
-        <h2>Kategori: {{ category }}</h2>
+        <h2>Kategori: {{ Category }}</h2>
     {% endif %}
     <div class="list-group">
         {% for todo in todos %}
