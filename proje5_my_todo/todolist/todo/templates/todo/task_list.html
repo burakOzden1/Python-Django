@@ -4,10 +4,11 @@
     <tr>
         <th>Görevler</th>
     </tr>
-    {% for task in object_list %}
+    {% for tasks in object_list %}
 
     <tr>
-        <td>{{ task.title }}</td>
+        <td>{{ tasks.title }}</td>
+        <td><a href="{% url 'task-detail' tasks.id %}">Göreve Git</a></td>
     </tr>
 
     {% empty %}

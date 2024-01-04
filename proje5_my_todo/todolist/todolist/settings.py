@@ -136,7 +136,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # DONE: Anasayfa uzerinde "Working" ifadesi goruldu.
 # DONE: todo/models.py uzerinden admin panelimize todo yapisini ekledik
 # DONE: admin panele ekledigimiz todo yapisinin gorunun olmasi icin todo/admin.py icerisinden todo/models.py icerisindeki Task class'ini cagirdik.
-# TODO: templates/todo/task_list.html dosyasini olusturarak 'Benim Todo List'im' yazisini ekrana getirmek icin gerekli duzenlemeleri yaptik.
+# DONE: templates/todo/task_list.html dosyasini olusturarak 'Benim Todo List'im' yazisini ekrana getirmek icin gerekli duzenlemeleri yaptik.
 # TODO:
 # TODO:
 # TODO:
