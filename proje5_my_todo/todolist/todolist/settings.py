@@ -129,6 +129,13 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
+LOGIN_URL = "login"
+
+LOGIN_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = "login"
+
+# Ahmet = asdfasdf123
+# Ali = asdfASDF123
 
 # TASKS:
 # DONE: Anasayfa yapimiz projeye eklendi(todo/views.py icerisine anasayfa fonk. yazildi, todo/urls.py icerisinden bu fonk. cagirildi.).
@@ -138,7 +145,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # DONE: admin panele ekledigimiz todo yapisinin gorunun olmasi icin todo/admin.py icerisinden todo/models.py icerisindeki Task class'ini cagirdik.
 # DONE: templates/todo/task_list.html dosyasini olusturarak 'Benim Todo List'im' yazisini ekrana getirmek icin gerekli duzenlemeleri yaptik.
 # DONE: en basit sekilde, html yapilari uzerinden verileri cektik ve ekranda gosterdik
-# TODO:
+# DONE: todo ekleme, düzenleme, silme, gibi islemleri yaptik ve html yapilarini kullanarak ekranda gosterdik
 # TODO:
 # TODO:
 # TODO:

@@ -1,23 +1,28 @@
+{% if request.user.is_authenticated %}
+<p>{{ request.user }}</p>
+<a href="{% url 'logout' %}">Çıkış Yap</a>
+{% else %}
+<a href="{% url 'login' %}">Giriş Yap</a>
+{% endif %}
+<hr>
+
 <h1>Benim Todo List'im</h1>
 
 <table>
     <tr>
         <th>Görevler</th>
     </tr>
-    {% for tasks in object_list %}
-
+    {% for tasks in task %}
     <tr>
         <td>{{ tasks.id }} - {{ tasks.title }}</td>
-        <td><a href="{% url 'task-detail' tasks.id %}">Görüntüle</a></td>
-        <td><a href="{% url 'task-update' tasks.id %}">Düzenle</a></td>
-        <td><a href="{% url 'task-delete' tasks.id %}">Sil</a></td>
+        <td><a href="{% url 'tasks-detail' tasks.id %}">Görüntüle</a></td>
+        <!-- <td><a href="{% url 'tasks-create' %}">Ekle</a></td> -->
+        <td><a href="{% url 'tasks-update' tasks.id %}">Düzenle</a></td>
+        <td><a href="{% url 'tasks-delete' tasks.id %}">Sil</a></td>
     </tr>
-
     {% empty %}
     <h3>Listelenecek Görev Bulunamadı.</h3>
-    <a href="">Görev Ekle</a>
-
     {% endfor %}
 
-    <td><a href="{% url 'task-create' %}">Ekle</a></td>
 </table>
+<a href="{% url 'tasks-create' %}">Görev Ekle</a>
