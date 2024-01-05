@@ -24,10 +24,13 @@ SECRET_KEY = 'django-insecure-mk6@qgn_vcl-!1hlno)1p_7q*3*1kzdzf^4m3**_(v@mj0e012
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# debug ayari True yapilirsa debugger yani sorun cozucu kisi hatalari gorur,
+# guvenlik acigi olmamasi icin bu ayar False iken site yayina alinmalidir.
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
+    # Buradaki bilgiler disinda bir bilgi girilmek istenirse 
 ]
 
 
@@ -164,8 +167,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Tekrar
 # DONE: admin panele giris yapilarak Todo yapisi eklendi ve oradaki goruntu ayarlari yapildi.
-# TODO:
-# TODO:
+# TODO: admin panelde title, ve is_active gibi bilgilerin goruntulenmesi saglandi
+# TODO: admin panel uzerinde todolarin eklenme tarihinin ve update edilme tarihinin bilgisi gosterildi. settings.py icerisindeki DEBUG ve ALLOWED_HOSTS ayarlari uzerinde duruldu.
 # TODO:
 # TODO:
 # TODO:
