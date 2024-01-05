@@ -10,3 +10,7 @@ class Todo(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     # Satirlar update edildiginde tarih ve saat bilgisi kaydedilsin
     # bu ikisi arasindaki fark iyi anlasilmali!!!
+
+    def __str__(self):
+        return self.title
+    # objeyi cagirdigimiz zaman varsayilan olarak title gelmesini saglar.
