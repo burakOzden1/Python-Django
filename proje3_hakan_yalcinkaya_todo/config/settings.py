@@ -77,7 +77,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'config.project_context_processors.global_category_context',
+                # 'config.project_context_processors.global_category_context',
             ],
         },
     },
@@ -143,10 +143,6 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-
-
-
-
 # Yapilan Islemler:
 # Django ORM Query -> all, filter, explude, create, get incelendi
 # Django ORM ile veriler guncellendi (update)
@@ -157,8 +153,23 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # PATRON CILDIRDI :)
 # DONE: Todo'nun kategorisi olsun? (tek kategori ise foreign key )
-# TODO: Kategori icindeki Tasklar Neler?
-# TODO: Todo ekleyen kisi kim? (foreign key)
-# TODO: Todo'yu ekleyen kisi sadece kendi TODO itemlarini gorebilsin
-# TODO: Todo'ya tag ekleyelim, birden fazla tag eklenebilir olsun (ManyToMany)
-# TODO: Tag'a Ait Todo'lar Neler?
+# DONE: Kategori icindeki Tasklar Neler?
+# DONE: Todo ekleyen kisi kim? (foreign key)
+# DONE: Todo'yu ekleyen kisi sadece kendi TODO itemlarini gorebilsin
+# DONE: Todo'ya tag ekleyelim, birden fazla tag eklenebilir olsun (ManyToMany)
+# DONE: Tag'a Ait Todo'lar Neler?
+
+
+
+
+# Tekrar
+# TODO: admin panele giris yapilarak Todo yapisi eklendi ve oradaki goruntu ayarlari yapildi.
+# TODO:
+# TODO:
+# TODO:
+# TODO:
+# TODO:
+# TODO:
+# TODO:
+# TODO:
+# TODO:
