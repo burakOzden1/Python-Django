@@ -146,7 +146,7 @@ LOGOUT_REDIRECT_URL = "login"
 # DONE: templates/todo/task_list.html dosyasini olusturarak 'Benim Todo List'im' yazisini ekrana getirmek icin gerekli duzenlemeleri yaptik.
 # DONE: en basit sekilde, html yapilari uzerinden verileri cektik ve ekranda gosterdik
 # DONE: todo ekleme, düzenleme, silme, gibi islemleri yaptik ve html yapilarini kullanarak ekranda gosterdik
-# TODO:
-# TODO:
+# DONE: login, logout, register ve diger kullanici islemleri yapilarak html yapilari ile ekranda gosterildi.
+# DONE: todolar icin arama cubugu eklendi
 # TODO:
 # TODO:
