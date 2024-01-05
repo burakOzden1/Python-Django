@@ -163,7 +163,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Tekrar
-# TODO: admin panele giris yapilarak Todo yapisi eklendi ve oradaki goruntu ayarlari yapildi.
+# DONE: admin panele giris yapilarak Todo yapisi eklendi ve oradaki goruntu ayarlari yapildi.
 # TODO:
 # TODO:
 # TODO:
