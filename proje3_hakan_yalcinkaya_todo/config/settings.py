@@ -169,7 +169,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # DONE: admin panele giris yapilarak Todo yapisi eklendi ve oradaki goruntu ayarlari yapildi.
 # TODO: admin panelde title, ve is_active gibi bilgilerin goruntulenmesi saglandi
 # TODO: admin panel uzerinde todolarin eklenme tarihinin ve update edilme tarihinin bilgisi gosterildi. settings.py icerisindeki DEBUG ve ALLOWED_HOSTS ayarlari uzerinde duruldu.
-# TODO:
+# TODO: todo/views.py icerisine todo_list.html eklendi, config/urls.py icerisinden cagirildi. Base.html yapisi olusturuldu, settings.py icerisinden statik dosyalar cagirildi.
 # TODO:
 # TODO:
 # TODO:
