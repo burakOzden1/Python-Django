@@ -1,4 +1,42 @@
 {% extends 'core/base.html' %}
+
 {% block container %}
-<h1 class="text-primary">TODO LIST</h1>
+<h1 class="text-primary">TODO LIST ({{ todos.count }})</h1>
+<ul>
+    {% for todo in todos %}
+    <li>{{ todo.title }}</li>
+    {% endfor %}
+</ul>
 {% endblock container %}
+
+
+
+<!-- 
+
+{# extends 'core/base.html' #}
+{# block container #}
+<h1 class=".text-info">TODO LIST</h1>
+<div class="p-3 mb-2 bg-primary text-white">
+    <ul>
+        {# for todo in todos #}
+        <li>{{ todo.title }} -- {{ todo.created_at }} -- {{ todo.updated_at }}</li>
+        {# endfor #}
+    </ul>
+</div>
+<div class="p-3 mb-2 bg-secondary text-white">
+    <ul>
+        {# for todo in todosActive #}
+        <li>{{ todo.title }} -- {{ todo.created_at }} -- {{ todo.updated_at }}</li>
+        {# endfor #}
+    </ul>
+</div>
+<div class="p-3 mb-2 bg-success text-white">
+    <ul>
+        {# for todo in todosPassive #}
+        <li>{{ todo.title }} -- {{ todo.created_at }} -- {{ todo.updated_at }}</li>
+        {# endfor #}
+    </ul>
+</div>
+{# endblock container #}
+
+ -->
