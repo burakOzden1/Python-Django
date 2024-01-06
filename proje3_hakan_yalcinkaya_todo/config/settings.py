@@ -172,7 +172,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # TODO: todo/views.py icerisine todo_list.html eklendi, config/urls.py icerisinden cagirildi. Base.html yapisi olusturuldu, settings.py icerisinden statik dosyalar cagirildi.
 # TODO: footer.html, navbar.html ve base.html yapilari olusturuldu. Bazi duzenlemeler yapildi.
 # TODO: todolarin views.py icerisinde filtrelenerek todo_list.html uzerinde gosterilmesi uzerine bir takim denemeler yapildi.
-# TODO:
-# TODO:
+# TODO: django shell ile bir takim islemler yapildi. objects.all() diyerek cagirdigimiz nesnelerin varsayilanlik ayarlari yapildi.
+# TODO: todo_list.html ve todo_detail.html sayfalari olusturuldu. (views.py ve urls.py dosyalarini iyi incele)
 # TODO:
 # TODO:
