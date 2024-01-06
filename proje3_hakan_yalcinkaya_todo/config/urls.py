@@ -19,7 +19,13 @@ from django.urls import path
 from todo.views import home_view, todo_detail_view
 
 urlpatterns = [
+<<<<<<< HEAD
     path("", home_view),
     path("todo/<int:id>/", todo_detail_view),
     path("admin/", admin.site.urls),
+=======
+    path('', home_view),
+    path('todo/<int:id>/', todo_detail_view),
+    path('admin/', admin.site.urls),
+>>>>>>> 11c91e0803c6d876662437be42bc50c66036dcb1
 ]
