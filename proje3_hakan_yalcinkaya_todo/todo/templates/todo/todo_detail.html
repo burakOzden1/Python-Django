@@ -1,20 +1,11 @@
 {% extends 'core/base.html' %}
 
 {% block container %}
-
 <div class="col-sm-6 offset-sm-3">
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">{{ todo.title }}</h5>
-            <h6 class="card-subtitle mb-2 text-body-secondary">{{ todo.category }}</h6>
-            <p class="card-text">{{ todo.content }}</p>
-            <ul class="list-unstyled">
-                <li><small>Oluşturulma: {{ todo.created_at|date:"D.d.M.Y H:s" }}</small></li>
-                <li><small>Son Güncelleme: {{ todo.updated_at|date:"D.d.M.Y H:s" }}</small></li>
-            </ul>
-            <a href="/" class="card-link">Geri Dön</a>
-        </div>
-    </div>
+    <a href="/" class="btn btn-primary">Ana Sayfa</a>
+    <h1 class="text-primary">{{ todo.title }}</h1>
+    <p>
+        {{ todo.content }}
+    </p>
 </div>
-
 {% endblock container %}
