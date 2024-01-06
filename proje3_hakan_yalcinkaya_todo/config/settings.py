@@ -163,12 +163,20 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Tekrar
 # DONE: admin panele giris yapilarak Todo yapisi eklendi ve oradaki goruntu ayarlari yapildi.
-# TODO: admin panelde title, ve is_active gibi bilgilerin goruntulenmesi saglandi
-# TODO: admin panel uzerinde todolarin eklenme tarihinin ve update edilme tarihinin bilgisi gosterildi. settings.py icerisindeki DEBUG ve ALLOWED_HOSTS ayarlari uzerinde duruldu.
-# TODO: todo/views.py icerisine todo_list.html eklendi, config/urls.py icerisinden cagirildi. Base.html yapisi olusturuldu, settings.py icerisinden statik dosyalar cagirildi.
-# TODO: footer.html, navbar.html ve base.html yapilari olusturuldu. Bazi duzenlemeler yapildi.
-# TODO: todolarin views.py icerisinde filtrelenerek todo_list.html uzerinde gosterilmesi uzerine bir takim denemeler yapildi.
-# TODO: django shell ile bir takim islemler yapildi. objects.all() diyerek cagirdigimiz nesnelerin varsayilanlik ayarlari yapildi.
-# TODO: todo_list.html ve todo_detail.html sayfalari olusturudu. (views.py ve urls.py dosyalarini iyi incele)
-# TODO: todo-detail.html sayfasi ile ilgili bazi duzenlemeler yapildi ve 404 hatalari eklendi.
-# TODO:
+# DONE: admin panelde title, ve is_active gibi bilgilerin goruntulenmesi saglandi
+# DONE: admin panel uzerinde todolarin eklenme tarihinin ve update edilme tarihinin bilgisi gosterildi. settings.py icerisindeki DEBUG ve ALLOWED_HOSTS ayarlari uzerinde duruldu.
+# DONE: todo/views.py icerisine todo_list.html eklendi, config/urls.py icerisinden cagirildi. Base.html yapisi olusturuldu, settings.py icerisinden statik dosyalar cagirildi.
+# DONE: footer.html, navbar.html ve base.html yapilari olusturuldu. Bazi duzenlemeler yapildi.
+# DONE: todolarin views.py icerisinde filtrelenerek todo_list.html uzerinde gosterilmesi uzerine bir takim denemeler yapildi.
+# DONE: django shell ile bir takim islemler yapildi. objects.all() diyerek cagirdigimiz nesnelerin varsayilanlik ayarlari yapildi.
+# DONE: todo_list.html ve todo_detail.html sayfalari olusturudu. (views.py ve urls.py dosyalarini iyi incele)
+# DONE: todo-detail.html sayfasi ile ilgili bazi duzenlemeler yapildi ve 404 hatalari eklendi.
+# DONE: get_object_or_404 ve todolara link ozelligi ekleme islemi.
+# DONE: auto_slug paketi eklendi ve Category modeli olusturuldu.
+# DONE:
+# DONE:
+# DONE:
+# DONE:
+# DONE:
+# DONE:
+# DONE:

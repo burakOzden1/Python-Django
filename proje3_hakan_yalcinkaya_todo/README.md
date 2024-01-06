@@ -57,4 +57,20 @@ from todo.models import Todo
 
 Todo.objects.get(id=1)
 Todo.objects.get(pk=1) # ikiside ayni sonucu verir, pk = primary key
+
+
+################
+>>> from todo.models import Category
+>>> cats = Category.objects.all()
+>>> for item in cats:
+...     print(item.title, item.slug)
+...
+Genel genel
+Django django
+React react
+Eğitim egitim
+Python python
+################
+
+
 ```
