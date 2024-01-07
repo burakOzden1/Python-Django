@@ -1,6 +1,7 @@
 from django.db import models
 from autoslug import AutoSlugField
 from django.urls import reverse
+from django.contrib.auth.models import User
 
 
 class Category(models.Model):
@@ -21,6 +22,10 @@ class Category(models.Model):
 
 
 class Todo(models.Model):
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE
+    )  # kullanici silindigi zaman olusturdugu todolarda silinsin.
+    # user = models.ForeignKey(User, on_delete=models.CASCADE, default=1) #
     # category = models.ForeignKey(Category, on_delete=models.CASCADE) # Bunu kullanirsak Category silinirse o kategoride
     # bulunan tum todolar silinir, biz bunu istemiyoruz. Onun yerine SET_NULL yapisini kullanabiliriz. (Asagidaki gibi)
     category = models.ForeignKey(

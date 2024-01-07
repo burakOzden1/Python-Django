@@ -179,4 +179,17 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # DONE: kategoriler icerisindeki todolarin gosterilmesi uzerine bir takim islemler yapildi.
 # DONE: kategorilerin gosterilmesi islemi get_absolute_url fonksiyonu ile yapildi
 # DONE: todolara tiklandigi zaman urlde kategorinin altinda seklinde gorulmesi
+# DONE: breadcrumb eklenmesi
+# DONE: todo icerisine user eklenmesi
+# DONE:
+# DONE:
+# DONE:
+# DONE:
+# DONE:
+# DONE:
+# DONE:
+# DONE:
+# DONE:
+# DONE:
+# DONE:
 # DONE:
