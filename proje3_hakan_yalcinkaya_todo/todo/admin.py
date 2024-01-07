@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Todo, Category
+from .models import Todo, Category, Tag
 
 
 class TodoCategory(admin.ModelAdmin):
@@ -41,3 +41,4 @@ admin.site.register(Todo, TodoAdmin)
 # Parantez icerisine ekledigimiz TodoAdmin ifadesi yukaridaki class'ta yapilan islemlerin admin panelde gorunmesini sagladi.
 
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(Tag)

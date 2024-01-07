@@ -21,6 +21,15 @@ class Category(models.Model):
         )  # kategori bilgilerinin ekrana daha kolay sekilde getirilmesini saglar. Bu fonksiyonu navbar.html sayfasindan cagirdik
 
 
+class Tag(models.Model):
+    title = models.CharField(max_length=200)
+    slug = AutoSlugField(populate_from="title", unique=True)
+    is_active = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.title
+
+
 class Todo(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE
@@ -43,6 +52,8 @@ class Todo(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     # Satirlar update edildiginde tarih ve saat bilgisi kaydedilsin
     # bu ikisi arasindaki fark iyi anlasilmali!!!
+
+    tag = models.ManyToManyField(Tag)
 
     def __str__(self):
         return (
