@@ -6,7 +6,7 @@ from django.contrib.auth.decorators import login_required
 
 # My Models:
 
-from .models import Todo, Category
+from .models import Todo, Category, Tag
 
 
 @login_required(login_url="/admin/login/")
@@ -66,3 +66,13 @@ def todo_detail_view(request, category_slug, id):
         todo=todo,
     )
     return render(request, "todo/todo_detail.html", context)
+
+
+@login_required(login_url="/admin/login/")
+def tag_view(request, tag_slug):
+    tag = get_object_or_404(Tag, slug=tag_slug)
+    context = dict(
+        tag=tag,
+        todos=tag.todo_set.filter(user=request.user),
+    )
+    return render(request, "todo/todo_list.html", context)

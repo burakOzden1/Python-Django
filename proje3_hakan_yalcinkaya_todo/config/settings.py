@@ -183,8 +183,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # DONE: todo icerisine user eklenmesi
 # DONE: login islemi eklendi
 # DONE: logout islemi ve oturumu kapatma
-# DONE:
-# DONE:
+# DONE: manyToManyField ile tag yapisinin olusturulmasi
+# DONE: tag yapilarina tiklanabilirlik ozelligi eklendi ve ters yönde calisir hale getirildi.
 # DONE:
 # DONE:
 # DONE:

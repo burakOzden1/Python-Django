@@ -29,6 +29,14 @@ class Tag(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse(
+            "tag_view",
+            kwargs={
+                "tag_slug": self.slug,
+            },
+        )  # kategori bilgilerinin ekrana daha kolay sekilde getirilmesini saglar. Bu fonksiyonu navbar.html sayfasindan cagirdik
+
 
 class Todo(models.Model):
     user = models.ForeignKey(
