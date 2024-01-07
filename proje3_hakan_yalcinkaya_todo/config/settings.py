@@ -176,7 +176,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # DONE: foreignKey ile Category nin admin panele eklenmesi ve orada gosterilmesi.
 # DONE: context_processor ile kategori bilgilerini ekranda gorme ve todo_detail sayfasinda todo larimizin eklenme tarihlerinin gosterilmesi
 # DONE: todo_detail.html sayfasina card yapisinin eklenerek daha düzenli sekilde gosterilmesi
-# DONE:
+# DONE: kategoriler icerisindeki todolarin gosterilmesi uzerine bir takim islemler yapildi.
 # DONE:
 # DONE:
 # DONE:
