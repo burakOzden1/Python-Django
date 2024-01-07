@@ -177,6 +177,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # DONE: context_processor ile kategori bilgilerini ekranda gorme ve todo_detail sayfasinda todo larimizin eklenme tarihlerinin gosterilmesi
 # DONE: todo_detail.html sayfasina card yapisinin eklenerek daha düzenli sekilde gosterilmesi
 # DONE: kategoriler icerisindeki todolarin gosterilmesi uzerine bir takim islemler yapildi.
-# DONE:
+# DONE: kategorilerin gosterilmesi islemi get_absolute_url fonksiyonu ile yapildi
 # DONE:
 # DONE:

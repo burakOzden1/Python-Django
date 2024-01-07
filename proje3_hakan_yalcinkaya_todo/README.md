@@ -71,6 +71,15 @@ React react
 Eğitim egitim
 Python python
 ################
+>>> from todo.models import Category
+>>> Category.objects.first() # bu ifade ilk kategoriyi dondurur.                             
+<Category: Genel>
+>>> cat = Category.objects.first()                              
+>>> cat.get_absolute_url()
+'/category/genel/'
+>>> 
+################
+################
 
 
 ```
