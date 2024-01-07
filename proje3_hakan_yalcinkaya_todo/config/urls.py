@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from todo.views import home_view, todo_detail_view, category_view
+from config.views import logout_view
 
 urlpatterns = [
     path("", home_view),
@@ -27,5 +28,6 @@ urlpatterns = [
         name="todo_detail_view",
     ),
     # path("todo/<int:id>/", todo_detail_view, name="todo_detail_view"),
+    path("logout/", logout_view, name="logout_view"),
     path("admin/", admin.site.urls),
 ]

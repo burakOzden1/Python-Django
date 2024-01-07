@@ -182,7 +182,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # DONE: breadcrumb eklenmesi
 # DONE: todo icerisine user eklenmesi
 # DONE: login islemi eklendi
-# DONE:
+# DONE: logout islemi ve oturumu kapatma
 # DONE:
 # DONE:
 # DONE:
