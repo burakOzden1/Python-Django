@@ -178,5 +178,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # DONE: todo_detail.html sayfasina card yapisinin eklenerek daha düzenli sekilde gosterilmesi
 # DONE: kategoriler icerisindeki todolarin gosterilmesi uzerine bir takim islemler yapildi.
 # DONE: kategorilerin gosterilmesi islemi get_absolute_url fonksiyonu ile yapildi
-# DONE:
+# DONE: todolara tiklandigi zaman urlde kategorinin altinda seklinde gorulmesi
 # DONE:
