@@ -173,7 +173,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # DONE: todo-detail.html sayfasi ile ilgili bazi duzenlemeler yapildi ve 404 hatalari eklendi.
 # DONE: get_object_or_404 ve todolara link ozelligi ekleme islemi.
 # DONE: auto_slug paketi eklendi ve Category modeli olusturuldu.
-# DONE:
+# DONE: foreignKey ile Category nin admin panele eklenmesi ve orada gosterilmesi.
 # DONE:
 # DONE:
 # DONE:

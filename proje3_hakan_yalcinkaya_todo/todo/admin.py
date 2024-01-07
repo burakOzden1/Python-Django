@@ -8,11 +8,18 @@ class TodoCategory(admin.ModelAdmin):
 
 class TodoAdmin(admin.ModelAdmin):
     list_display = [
+        "pk",
+        "category",
         "title",
         "is_active",
-        "created_at",
-        "updated_at",
+        # "created_at",
+        # "updated_at",
     ]
+    list_display_links = [
+        "pk",
+        "category",
+        "title",
+    ]  # tiklanabilirlik ozelligi ekledik.
 
 
 admin.site.register(Todo, TodoAdmin)

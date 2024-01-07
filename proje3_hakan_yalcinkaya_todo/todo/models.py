@@ -11,6 +11,15 @@ class Category(models.Model):
 
 
 class Todo(models.Model):
+    # category = models.ForeignKey(Category, on_delete=models.CASCADE) # Bunu kullanirsak Category silinirse o kategoride
+    # bulunan tum todolar silinir, biz bunu istemiyoruz. Onun yerine SET_NULL yapisini kullanabiliriz. (Asagidaki gibi)
+    category = models.ForeignKey(
+        Category,
+        on_delete=models.SET_NULL,
+        null=True,
+    )  # SET_NULL dersek null=True ifadesini
+    # kullanmak zorundayiz, yani null olabileceginin yetkisini vermeliyiz.
+
     title = models.CharField(max_length=200)
     content = models.TextField(blank=True, null=True)
     is_active = models.BooleanField(default=False)
