@@ -43,3 +43,12 @@ class Todo(models.Model):
         return (
             self.title
         )  # objeyi cagirdigimiz zaman varsayilan olarak title gelmesini saglar.
+
+    def get_absolute_url(self):
+        return reverse(
+            "todo_detail_view",
+            kwargs={
+                "category_slug": self.category.slug,
+                "id": self.pk,
+            },
+        )  # kategori bilgilerinin ekrana daha kolay sekilde getirilmesini saglar. Bu fonksiyonu navbar.html sayfasindan cagirdik
