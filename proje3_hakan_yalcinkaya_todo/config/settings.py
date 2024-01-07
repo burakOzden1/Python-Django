@@ -181,7 +181,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # DONE: todolara tiklandigi zaman urlde kategorinin altinda seklinde gorulmesi
 # DONE: breadcrumb eklenmesi
 # DONE: todo icerisine user eklenmesi
-# DONE:
+# DONE: login islemi eklendi
 # DONE:
 # DONE:
 # DONE:
