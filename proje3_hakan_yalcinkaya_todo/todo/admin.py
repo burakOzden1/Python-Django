@@ -6,6 +6,19 @@ class TodoCategory(admin.ModelAdmin):
     list_display = ["title"]
 
 
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = [
+        "pk",
+        "title",
+        "is_active",
+    ]
+    list_display_links = [
+        "pk",
+        "title",
+        "is_active",
+    ]  # tiklanabilirlik ozelligi ekledik.
+
+
 class TodoAdmin(admin.ModelAdmin):
     list_display = [
         "pk",
@@ -27,4 +40,4 @@ admin.site.register(Todo, TodoAdmin)
 # Bu satir normalde en ustteydi ama admin panel uzerindeki goruntu ayarlarini da yapacagimiz icin asagiya almak zorunda kaldik.
 # Parantez icerisine ekledigimiz TodoAdmin ifadesi yukaridaki class'ta yapilan islemlerin admin panelde gorunmesini sagladi.
 
-admin.site.register(Category)
+admin.site.register(Category, CategoryAdmin)

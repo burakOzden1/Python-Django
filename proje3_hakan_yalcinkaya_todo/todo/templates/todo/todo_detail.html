@@ -3,9 +3,15 @@
 {% block container %}
 <div class="col-sm-6 offset-sm-3">
     <a href="/" class="btn btn-primary">Ana Sayfa</a>
-    <h1 class="list-group-item list-group-item-action">{{ todo.title }}</h1>
+    <h1 class="list-group-item list-group-item-action">{{ todo.title }}
+        <small class="text-muted">{{ todo.category }}</small>
+    </h1>
     <p>
         {{ todo.content }}
     </p>
+    <ul>
+        <li>Oluşturulma Zamanı : {{ todo.created_at|date:"d/m/Y H.s" }}</li>
+        <li>Son Güncellenme Zamanı : {{ todo.updated_at|date:"d/m/Y H.s" }}</li>
+    </ul>
 </div>
 {% endblock container %}

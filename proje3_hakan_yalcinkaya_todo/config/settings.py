@@ -78,7 +78,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                # 'config.project_context_processors.global_category_context',
+                "config.project_context_processors.global_category_context",
             ],
         },
     },
@@ -174,7 +174,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # DONE: get_object_or_404 ve todolara link ozelligi ekleme islemi.
 # DONE: auto_slug paketi eklendi ve Category modeli olusturuldu.
 # DONE: foreignKey ile Category nin admin panele eklenmesi ve orada gosterilmesi.
-# DONE:
+# DONE: context_processor ile kategori bilgilerini ekranda gorme ve todo_detail sayfasinda todo larimizin eklenme tarihlerinin gosterilmesi
 # DONE:
 # DONE:
 # DONE:
