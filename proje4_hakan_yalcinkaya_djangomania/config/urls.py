@@ -24,7 +24,7 @@ urlpatterns = [
     # Todo App:
     path("todo/", include("todo.urls", namespace="todo")),
     # Auth:
-    path("account/logout", logout_view, name="logout_view"),
+    path("account/logout/", logout_view, name="logout_view"),
     # ADMIN:
     path("admin/", admin.site.urls),
 ]

@@ -1,0 +1,1 @@
+# kullanicinin kayıtlı olup olmadiginin bilgisi alindi ve anasayfadaki oturumu kapat alani bu bilgiye gore duzenlendi

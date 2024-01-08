@@ -42,7 +42,7 @@ THIRD_PARTY_APPS = []
 
 MY_APPS = [
     "todo",
-    # "page",
+    "page",
 ]
 
 INSTALLED_APPS = BASE_APPS + THIRD_PARTY_APPS + MY_APPS
