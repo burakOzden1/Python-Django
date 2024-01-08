@@ -32,6 +32,8 @@ urlpatterns = [
     path("todo/", include("todo.urls", namespace="todo")),
     # Auth:
     path("account/logout/", logout_view, name="logout_view"),
+    # TinyMCE:
+    path("admin/", admin.site.urls),
     # ADMIN:
     path("admin/", admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

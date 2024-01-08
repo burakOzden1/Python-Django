@@ -18,5 +18,7 @@
 
 
 {% block container %}
-{{ page.content }}
+<div class="col-sm-6 offset-sm-3">
+    {{ page.content|safe }} <!-- |safe yapisini sayfa icerisinde HTML bulunuyorsa bunu gizle anlaminda kullandik. -->
+</div>
 {% endblock container %}
