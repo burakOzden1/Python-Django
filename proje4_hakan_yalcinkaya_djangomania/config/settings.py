@@ -38,14 +38,14 @@ BASE_APPS = [
     "django.contrib.staticfiles",
 ]
 
-THIRD_PART_APPS = []
+THIRD_PARTY_APPS = []
 
 MY_APPS = [
     "todo",
-    "page",
+    # "page",
 ]
 
-INSTALLED_APPS = BASE_APPS + THIRD_PART_APPS + MY_APPS
+INSTALLED_APPS = BASE_APPS + THIRD_PARTY_APPS + MY_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
