@@ -19,8 +19,8 @@ class TodoCategory(models.Model):
     def __str__(self):
         return self.title
 
-    # def get_absolute_url(self):
-    #     return reverse("todo:category_view", kwargs={"category_slug": self.slug})
+    def get_absolute_url(self):
+        return reverse("todo:category_view", kwargs={"category_slug": self.slug})
 
 
 class TodoTag(models.Model):
@@ -36,8 +36,8 @@ class TodoTag(models.Model):
     def __str__(self):
         return self.title
 
-    # def get_absolute_url(self):
-    #     return reverse("todo:tag_view", kwargs={"tag_slug": self.slug})
+    def get_absolute_url(self):
+        return reverse("todo:tag_view", kwargs={"tag_slug": self.slug})
 
 
 class Todo(models.Model):
@@ -54,11 +54,11 @@ class Todo(models.Model):
     def __str__(self):
         return self.title
 
-    # def get_absolute_url(self):
-    #     return reverse(
-    #         "todo:todo_detail_view",
-    #         kwargs={
-    #             "category_slug": self.category.slug,
-    #             "id": self.pk,
-    #         },
-    #     )
+    def get_absolute_url(self):
+        return reverse(
+            "todo:todo_detail_view",
+            kwargs={
+                "category_slug": self.category.slug,
+                "id": self.pk,
+            },
+        )
