@@ -160,6 +160,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: blok yapisini olusturduk ve bazi shell islemleri ile slug yapisini inceledik. Slug Field ifadesinin de unique olmasini sagladik.
 # TODO: Blog yapisinin sayfa yapisini olusturduk ve ana ekrana ekledik
 # TODO: Blog postlarin kategori bazli gosterilmesi.
+# TODO: Blog postlarin etiket (tag) bazli gosterilmesi.
 # TODO:
 # TODO:
 # TODO:

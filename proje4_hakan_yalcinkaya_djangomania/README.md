@@ -73,6 +73,20 @@ django-shell-20-27
 'merhaba-python-ogcocamoce-cgqcuoocn'
 # son ekledigimiz postun pk'sini, title'ını ve olusturulan slug bilgisini getirdik.
 ###########################################################
+>>> from blog.models import BlogTag, Post
+>>> BlogTag.objects.first()
+<BlogTag: auth>
+>>> tag = BlogTag.objects.first() 
+>>> Post.objects.filter(tag=tag) 
+<QuerySet [<Post: Django deneme - 2>, <Post: Django deneme - 3>]>
+# tag bilgisinin gelip gelmemesinin kontrolu
+
+>>> Post.objects.filter(tag=tag).first()
+<Post: Django deneme - 2>
+>>> i = Post.objects.filter(tag=tag).first() 
+>>> i.tag.all()
+<QuerySet [<BlogTag: auth>, <BlogTag: forms>, <BlogTag: models>, <BlogTag: urls>]>
+# tek bir blog postun icerdigi tag bilgilerini getirmek icin kullandik.
 ###########################################################
 ###########################################################
 ###########################################################
