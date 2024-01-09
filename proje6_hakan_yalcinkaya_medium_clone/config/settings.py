@@ -138,11 +138,24 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
+# YAPILACAKLAR:::
+# TODO: Login
+# TODO: Sign Up *Avatar? Instagram? user_slug? / one_to_one / profile
+# TODO: Reset Password
+# TODO: User Avatar, Instagram Account, user_slug(first_name, last_name)
+# TODO: Blog App
+# TODO: Post(Login Olan Kullanici)
+# TODO: User Tag Olusturabilir *Kullanici tag bilgilerini virgul ile ayirarak gonderecek
+# TODO: Populer olanlar/ En cok Okunanlar
+# TODO: User Fav
+# TODO: PAGE App Model Yapisi / Admin
+
+
 # TASKS:
 # TODO: proje6: Medium Clone projesinin kurulumu
 # TODO: proje6: Home_view yapisi eklendi ve ayarlar guncellendi.
 # TODO: proje6: settings icerisinden anasayfa ayarlarinin yapilmasi ve templates klasorunun iceriginin ayarlanmasi.
-# TODO: proje6:
+# TODO: proje6: todolarin olusturulmasi
 # TODO: proje6:
 # TODO: proje6:
 # TODO: proje6:
