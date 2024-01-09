@@ -63,7 +63,9 @@ ROOT_URLCONF = "config.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [
+            BASE_DIR / "templates",
+        ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -126,6 +128,10 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
+STATICFILES_DIRS = [
+    BASE_DIR / "static_files",
+]
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
@@ -135,8 +141,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TASKS:
 # TODO: proje6: Medium Clone projesinin kurulumu
 # TODO: proje6: Home_view yapisi eklendi ve ayarlar guncellendi.
-# TODO:
-# TODO:
-# TODO:
-# TODO:
-# TODO:
+# TODO: proje6: settings icerisinden anasayfa ayarlarinin yapilmasi ve templates klasorunun iceriginin ayarlanmasi.
+# TODO: proje6:
+# TODO: proje6:
+# TODO: proje6:
+# TODO: proje6:
+# TODO: proje6:
