@@ -158,8 +158,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # ALLOWED_HOSTS alanina pc mizin IP adresini ekliyoruz, daha sonrada (python manage.py runserver 0.0.0.0:8000) diyerek projemizi calistiriyoruz.
 # pc mizin IP adresini aynı agda bulunan herhangi bir cihaza yazarak sonuna :8000 ekledigimiz zaman projemizi o cihazda goruruz.
 # TODO: blok yapisini olusturduk ve bazi shell islemleri ile slug yapisini inceledik. Slug Field ifadesinin de unique olmasini sagladik.
-# TODO:
-# TODO:
+# TODO: Blog yapisinin sayfa yapisini olusturduk ve ana ekrana ekledik
+# TODO: Blog postlarin kategori bazli gosterilmesi.
 # TODO:
 # TODO:
 # TODO:
