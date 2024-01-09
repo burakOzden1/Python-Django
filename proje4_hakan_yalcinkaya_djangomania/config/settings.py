@@ -161,7 +161,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: Blog yapisinin sayfa yapisini olusturduk ve ana ekrana ekledik
 # TODO: Blog postlarin kategori bazli gosterilmesi.
 # TODO: Blog postlarin etiket (tag) bazli gosterilmesi.
-# TODO:
+# TODO: blog_detail.html sayfasinin olusturulmasi ve bilgilerin oraya aktarilmasi islemleri gerceklestirildi. Birde post goruntunlenme sayisi eklendi
 # TODO:
 # TODO:
 # TODO:

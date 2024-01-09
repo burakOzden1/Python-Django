@@ -14,4 +14,9 @@ class BlogCategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
-    pass
+    list_display = [
+        "id",
+        "title",
+        "is_active",
+        "view_count",
+    ]
