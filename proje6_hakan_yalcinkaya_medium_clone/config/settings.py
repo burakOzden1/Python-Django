@@ -35,7 +35,7 @@ BASE_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
-    "django.contrib.messages",
+    "django.contrib.messages",  # kullaniciya mesaj vermeye yarar (sen zaten kayitlisin vb.)
     "django.contrib.staticfiles",
 ]
 
@@ -73,7 +73,7 @@ TEMPLATES = [
                 "django.template.context_processors.debug",
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
-                "django.contrib.messages.context_processors.messages",
+                "django.contrib.messages.context_processors.messages",  # mesaj gondermeye yarar.
             ],
         },
     },
@@ -141,6 +141,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # YAPILACAKLAR:::
 # TODO: Login
+# TODO: Logout
 # TODO: Sign Up *Avatar? Instagram? user_slug? / one_to_one / profile
 # TODO: Reset Password
 # TODO: User Avatar, Instagram Account, user_slug(first_name, last_name)
@@ -158,6 +159,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: settings icerisinden anasayfa ayarlarinin yapilmasi ve templates klasorunun iceriginin ayarlanmasi.
 # TODO: proje6: todolarin olusturulmasi
 # TODO: proje6: login.html yapisinin olusturulmasi ve login formunun eklenmesi
-# TODO: proje6:
+# TODO: proje6: login sayfalarinin bazi uyarilari verildi, devami gelecek.
 # TODO: proje6:
 # TODO: proje6:
