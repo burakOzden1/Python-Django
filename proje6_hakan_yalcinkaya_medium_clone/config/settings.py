@@ -44,6 +44,7 @@ THIRD_PARTY_APPS = []
 
 MY_APPS = [
     "page",
+    "user_profile",
 ]
 
 INSTALLED_APPS = BASE_APPS + THIRD_PARTY_APPS + MY_APPS
@@ -156,7 +157,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: Home_view yapisi eklendi ve ayarlar guncellendi.
 # TODO: proje6: settings icerisinden anasayfa ayarlarinin yapilmasi ve templates klasorunun iceriginin ayarlanmasi.
 # TODO: proje6: todolarin olusturulmasi
-# TODO: proje6:
+# TODO: proje6: login.html yapisinin olusturulmasi ve login formunun eklenmesi
 # TODO: proje6:
 # TODO: proje6:
 # TODO: proje6:
