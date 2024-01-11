@@ -43,6 +43,7 @@ BASE_APPS = [
 THIRD_PARTY_APPS = []
 
 MY_APPS = [
+    "blog",
     "page",
     "user_profile",
 ]
@@ -171,7 +172,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: register formunda gelismis kontrollerin yapilmasi, daha da gelistirilebilir.
 # TODO: proje6: register işlemleri sirasinda bir hata alindi ve o giderildi.
 # TODO: proje6: kullanici bilgilerinin profile modeline yazilmasi ve media files ayarlarinin yapilmasi.
-# TODO: proje6:
+# TODO: proje6: blog yazilari icin blog model yapisinin olusturulmasi.
 # TODO: proje6:
 # TODO: proje6:
 # TODO: proje6:
