@@ -44,5 +44,43 @@ def logout_view(request):
 def register_view(request):
     context = dict()
     if request.method == "POST":
-        print(request.POST)
+        post_info = request.POST
+        email = post_info.get("email")
+        email_confirm = post_info.get("email_confirm")
+        first_name = post_info.get("first_name")
+        last_name = post_info.get("last_name")
+        password = post_info.get("password")
+        password_confirm = post_info.get("password_confirm")
+        instagram = post_info.get("instagram")
+        print("*" * 30)
+        print(
+            email,
+            email_confirm,
+            password,
+            password_confirm,
+            first_name,
+            last_name,
+            instagram,
+        )
+
+        if len(first_name) < 3 or len(last_name) < 3 or len(email) < 3 or len(password):
+            messages.warning(
+                request, "İsim ve Soyisim bilgileri en az 3 karakterden oluşmalıdır!"
+            )
+            return redirect("user_profile:register_view")
+
+        if email != email_confirm:
+            messages.warning(
+                request, "Lütfen Eposta bilgisini doğru girdiğinizden emin olunuz."
+            )
+            return redirect("user_profile:register_view")
+
+        elif password != password_confirm:
+            messages.warning(
+                request, "Lütfen şifrenizi doğru girdiğinizden emin olunuz."
+            )
+            return redirect("user_profile:register_view")
+
+        print("*" * 30)
+        # print(request.POST)  # kullanicinin bilgilerini konsolda gostedik.
     return render(request, "user_profile/register.html", context)
