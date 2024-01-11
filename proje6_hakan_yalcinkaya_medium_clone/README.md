@@ -21,3 +21,19 @@ False
 # Bu kullaniciyi ya getir ya da olustur dedik, False ifadesi kullanicinin daha once kaydının oldugunu gosterir.
 
 -->
+
+
+
+
+
+<!-- 
+
+>>> from blog.models import BlogPost
+>>> b = BlogPost.objects.first()
+>>> b.slug
+'asdfasdfasdfa'
+>>> b.user 
+<User: django@django.com>
+>>>
+
+-->
