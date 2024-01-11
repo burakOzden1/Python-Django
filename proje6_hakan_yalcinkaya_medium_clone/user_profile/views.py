@@ -1,41 +1,41 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.models import User
+
+from slugify import slugify
+
+from .models import Profile
 
 
 def login_view(request):
-    # login olan kullanici direkt olarak ana sayfaya gitsin.
+
+    # login olan kullanici direkt olarak anasayfaya gidecek
     if request.user.is_authenticated:
-        # zaten loginsin!!!
-        messages.info(request, f"{request.user.username} Daha Önce Login Olmuşsun")
-        # zaten loginsin!!!
+        messages.info(request, f"{request.user.username } Daha Once Login Olmussun ;)")
         return redirect("home_view")
-    # login olan kullanici direkt olarak ana sayfaya gitsin.
+    # login olan kullanici direkt olarak anasayfaya gidecek
 
     context = dict()
     if request.method == "POST":
-        # print(request.POST)
         username = request.POST.get("username")
         password = request.POST.get("password")
-        # bu bilgileri dogru aldik mi?
-        messages.success(request, f"Kullanıcı adı ve şifre  6 karakterden küçük olamaz!")
-        # bu bilgileri dogru aldik mi?
+
+        if len(username) < 6 or len(password) < 6:
+            messages.warning(request, f"Lutfen Kullani Adi ve Sifreyi Dogru Giriniz.. 6 Karakterden Kucuk Olmamali..",)
+            return redirect("user_profile:login_view")
+
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            # login oldugunu kullaniciya belli edelim!
-            if len(username) < 6 or len(password) < 6:
-                messages.success(request, f"{request.user.username} Login oldun")
-                return redirect("user_profile:login_view")
-            # login oldugunu kullaniciya belli edelim!
+            messages.success(request, f"{request.user.username } Login Oldun")
             return redirect("home_view")
-
     return render(request, "user_profile/login.html", context)
 
 
 def logout_view(request):
-    messages.info(request, f"{request.user.username} Oturumun kapatıldı.")
+    messages.info(request, f"{request.user.username } Oturumun Kapatildi")
     logout(request)
     return redirect("home_view")
 
@@ -51,43 +51,45 @@ def register_view(request):
         password = post_info.get("password")
         password_confirm = post_info.get("password_confirm")
         instagram = post_info.get("instagram")
-        print("*" * 30)
-        print(
-            email,
-            email_confirm,
-            password,
-            password_confirm,
-            first_name,
-            last_name,
-            instagram,
-        )
 
         if len(first_name) < 3 or len(last_name) < 3 or len(email) < 3 or len(password) < 3:
-            messages.warning(request, "İsim ve Soyisim bilgileri en az 3 karakterden oluşmalıdır!")
+            messages.warning(request, "Bilgiler en az 3 karakterden olusmali..")
             return redirect("user_profile:register_view")
 
         if email != email_confirm:
-            messages.warning(request, "Lütfen Eposta bilgisini doğru girdiğinizden emin olunuz.")
+            messages.warning(request, "Lutfen Email Bilgisini Dogru Giriniz..")
             return redirect("user_profile:register_view")
 
-        elif password != password_confirm:
-            messages.warning(request, "Lütfen şifrenizi doğru girdiğinizden emin olunuz.")
+        if password != password_confirm:
+            messages.warning(request, "Lutfen Sifre Bilgisini Dogru Giriniz..")
             return redirect("user_profile:register_view")
-        
+
         user, created = User.objects.get_or_create(username=email)
-
+        # Eger Kullanici Created Degilse Kullanici Daha Once Sisteme Kayitlidir..
         if not created:
-            user = authenticate(request, username=email, password=password)
+            user_login = authenticate(request, username=email, password=password)
             if user is not None:
-                messages.success(request, f"{request.user.email} Eposta adresi ile daha önce bir kaydınız var.Ana Sayfaya yönlendirildiniz.")
-                # kullanici login oldu
+                messages.success( request, "Daha Once Kayit Olmussunuz.. Ana Sayfaya Yonlendirildiniz..")
+                # Kullanici Login oldu ;)
                 login(request, user)
-                return redirect('home_view')
-            messages.success(request, f'{email} Eposta adresi sistemde kayıtlı ama giriş yapamadınız, giriş sayfasına yonlendiriliyorsunuz')
-            return redirect('user_profile:login_view')
-            
+                return redirect("home_view")
+            messages.warning(request, f"{email} adresi sistemde kayitli ama Login olamadiniz.. Login Sayfasina Yonlendiriliyorsunuz")
+            return redirect("user_profile:login_view")
+        
+        # user.email = email
+        # user.first_name = first_name
+        # user.last_name = last_name
+        # user.set_password(password)
 
+        # profile, profile_created = Profile.objects.get_or_create(user=user)
+        # profile.instagram = instagram
+        # profile.slug = slugify(f"{first_name}-{last_name}")
+        # user.save()
+        # profile.save()
 
-        print("*" * 30)
-        # print(request.POST)  # kullanicinin bilgilerini konsolda gostedik.
+        # messages.success(request, f"{user.first_name} Sisteme Kaydedildiniz..")
+        # user_login = authenticate(request, username=email, password=password)
+        # login(request, user_login)
+        # return redirect("home_view")
+
     return render(request, "user_profile/register.html", context)
