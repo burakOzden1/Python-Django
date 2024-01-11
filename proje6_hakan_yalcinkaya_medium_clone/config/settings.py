@@ -40,7 +40,10 @@ BASE_APPS = [
 ]
 
 
-THIRD_PARTY_APPS = []
+THIRD_PARTY_APPS = [
+    "crispy_forms",
+    "crispy_bootstrap5",
+]
 
 MY_APPS = [
     "blog",
@@ -49,6 +52,11 @@ MY_APPS = [
 ]
 
 INSTALLED_APPS = BASE_APPS + THIRD_PARTY_APPS + MY_APPS
+
+# CRISPY:
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -135,9 +143,9 @@ STATICFILES_DIRS = [
 ]
 
 # mediafiles ayarlari
-MEDIA_URL = 'media/'
+MEDIA_URL = "media/"
 
-MEDIA_ROOT = BASE_DIR / 'media_files'
+MEDIA_ROOT = BASE_DIR / "media_files"
 # mediafiles ayarlari
 
 # Default primary key field type
@@ -174,6 +182,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: kullanici bilgilerinin profile modeline yazilmasi ve media files ayarlarinin yapilmasi.
 # TODO: proje6: blog yazilari icin blog model yapisinin olusturulmasi.
 # TODO: proje6: blog yazilari icin html yapilari olusturuldu ve bazi ayarlar yapildi.
-# TODO: proje6:
+# TODO: proje6: blog yazilarinin html sayfasindaki ve admin panel uzerindeki gorunumlerini ayarladik.
 # TODO: proje6:
 # TODO: proje6:

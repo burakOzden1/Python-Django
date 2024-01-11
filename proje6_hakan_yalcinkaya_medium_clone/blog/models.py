@@ -33,7 +33,7 @@ class Tag(CommonModel):
     #     return reverse("blog:tag_view", kwargs={"tag_slug": self.slug})
 
 
-class Post(CommonModel):
+class BlogPost(CommonModel):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
     tag = models.ManyToManyField(Tag)
