@@ -76,20 +76,20 @@ def register_view(request):
             messages.warning(request, f"{email} adresi sistemde kayitli ama Login olamadiniz.. Login Sayfasina Yonlendiriliyorsunuz")
             return redirect("user_profile:login_view")
         
-        # user.email = email
-        # user.first_name = first_name
-        # user.last_name = last_name
-        # user.set_password(password)
+        user.email = email
+        user.first_name = first_name
+        user.last_name = last_name
+        user.set_password(password)
 
-        # profile, profile_created = Profile.objects.get_or_create(user=user)
-        # profile.instagram = instagram
-        # profile.slug = slugify(f"{first_name}-{last_name}")
-        # user.save()
-        # profile.save()
+        profile, profile_created = Profile.objects.get_or_create(user=user)
+        profile.instagram = instagram
+        profile.slug = slugify(f"{first_name}-{last_name}")
+        user.save()
+        profile.save()
 
-        # messages.success(request, f"{user.first_name} Sisteme Kaydedildiniz..")
-        # user_login = authenticate(request, username=email, password=password)
-        # login(request, user_login)
-        # return redirect("home_view")
+        messages.success(request, f"{user.first_name} Sisteme Kaydedildiniz..")
+        user_login = authenticate(request, username=email, password=password)
+        login(request, user_login)
+        return redirect("home_view")
 
     return render(request, "user_profile/register.html", context)

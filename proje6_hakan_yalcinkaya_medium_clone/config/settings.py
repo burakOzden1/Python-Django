@@ -133,9 +133,11 @@ STATICFILES_DIRS = [
     BASE_DIR / "static_files",
 ]
 
+# mediafiles ayarlari
 MEDIA_URL = 'media/'
 
 MEDIA_ROOT = BASE_DIR / 'media_files'
+# mediafiles ayarlari
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -168,7 +170,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: register formunda temel kontrollerin yapilmasi, daha da gelistirilebilir.
 # TODO: proje6: register formunda gelismis kontrollerin yapilmasi, daha da gelistirilebilir.
 # TODO: proje6: register işlemleri sirasinda bir hata alindi ve o giderildi.
-# TODO: proje6:
+# TODO: proje6: kullanici bilgilerinin profile modeline yazilmasi ve media files ayarlarinin yapilmasi.
 # TODO: proje6:
 # TODO: proje6:
 # TODO: proje6:
