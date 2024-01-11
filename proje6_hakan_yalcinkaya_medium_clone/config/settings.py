@@ -173,7 +173,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: register işlemleri sirasinda bir hata alindi ve o giderildi.
 # TODO: proje6: kullanici bilgilerinin profile modeline yazilmasi ve media files ayarlarinin yapilmasi.
 # TODO: proje6: blog yazilari icin blog model yapisinin olusturulmasi.
-# TODO: proje6:
+# TODO: proje6: blog yazilari icin html yapilari olusturuldu ve bazi ayarlar yapildi.
 # TODO: proje6:
 # TODO: proje6:
 # TODO: proje6:
