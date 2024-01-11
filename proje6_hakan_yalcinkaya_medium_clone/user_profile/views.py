@@ -1,6 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
 
 
 def login_view(request):
@@ -18,9 +19,7 @@ def login_view(request):
         username = request.POST.get("username")
         password = request.POST.get("password")
         # bu bilgileri dogru aldik mi?
-        messages.success(
-            request, f"Kullanıcı adı ve şifre  6 karakterden küçük olamaz!"
-        )
+        messages.success(request, f"Kullanıcı adı ve şifre  6 karakterden küçük olamaz!")
         # bu bilgileri dogru aldik mi?
         user = authenticate(request, username=username, password=password)
         if user is not None:
@@ -63,23 +62,31 @@ def register_view(request):
             instagram,
         )
 
-        if len(first_name) < 3 or len(last_name) < 3 or len(email) < 3 or len(password):
-            messages.warning(
-                request, "İsim ve Soyisim bilgileri en az 3 karakterden oluşmalıdır!"
-            )
+        if len(first_name) < 3 or len(last_name) < 3 or len(email) < 3 or len(password) < 3:
+            messages.warning(request, "İsim ve Soyisim bilgileri en az 3 karakterden oluşmalıdır!")
             return redirect("user_profile:register_view")
 
         if email != email_confirm:
-            messages.warning(
-                request, "Lütfen Eposta bilgisini doğru girdiğinizden emin olunuz."
-            )
+            messages.warning(request, "Lütfen Eposta bilgisini doğru girdiğinizden emin olunuz.")
             return redirect("user_profile:register_view")
 
         elif password != password_confirm:
-            messages.warning(
-                request, "Lütfen şifrenizi doğru girdiğinizden emin olunuz."
-            )
+            messages.warning(request, "Lütfen şifrenizi doğru girdiğinizden emin olunuz.")
             return redirect("user_profile:register_view")
+        
+        user, created = User.objects.get_or_create(username=email)
+
+        if not created:
+            user = authenticate(request, username=email, password=password)
+            if user is not None:
+                messages.success(request, f"{request.user.email} Eposta adresi ile daha önce bir kaydınız var.Ana Sayfaya yönlendirildiniz.")
+                # kullanici login oldu
+                login(request, user)
+                return redirect('home_view')
+            messages.success(request, f'{email} Eposta adresi sistemde kayıtlı ama giriş yapamadınız, giriş sayfasına yonlendiriliyorsunuz')
+            return redirect('user_profile:login_view')
+            
+
 
         print("*" * 30)
         # print(request.POST)  # kullanicinin bilgilerini konsolda gostedik.

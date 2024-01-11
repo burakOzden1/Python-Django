@@ -162,3 +162,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: login sayfalarinin bazi uyarilari verildi, devami gelecek.
 # TODO: proje6: logout islemi yapildi, sayfalar olusturuldu (Bu kisim cok onemli!!!!!!)
 # TODO: proje6: register formunda temel kontrollerin yapilmasi, daha da gelistirilebilir.
+# TODO: proje6: register formunda gelismis kontrollerin yapilmasi, daha da gelistirilebilir.
+# TODO: proje6: 
+# TODO: proje6:
+# TODO: proje6:
+# TODO: proje6:
+# TODO: proje6:
+# TODO: proje6:
+# TODO: proje6:
