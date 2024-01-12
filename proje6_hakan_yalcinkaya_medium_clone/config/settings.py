@@ -185,7 +185,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: blog yazilari icin html yapilari olusturuldu ve bazi ayarlar yapildi.
 # TODO: proje6: blog yazilarinin html sayfasindaki ve admin panel uzerindeki gorunumlerini ayarladik.
 # TODO: proje6: TinyMCE Kullanımı ve PostModelForm içindeki Bilgilerin Kaydedilmesi
-# TODO: proje6:
+# TODO: proje6: blog yazilari icin form denetimlerine cesitli validatorler ekleme
 # TODO: proje6:
 # TODO: proje6:
 # TODO: proje6:
