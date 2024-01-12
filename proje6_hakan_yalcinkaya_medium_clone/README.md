@@ -87,3 +87,17 @@ SyntaxError: incomplete input
 >>>
 # Blogpost uzerindeki tag'lara ulasmayi denedik.
 -->
+
+
+
+
+<!-- 
+# python komut satiri
+>>> x = '[{"value":"django"},{"value":"python"},{"value":"vs-code"},{"value":"dict"},{"value":"flask"},{"value":"turbo"}]'
+>>> x
+'[{"value":"django"},{"value":"python"},{"value":"vs-code"},{"value":"dict"},{"value":"flask"},{"value":"turbo"}]'
+>>> import json
+>>> json.loads(x)
+[{'value': 'django'}, {'value': 'python'}, {'value': 'vs-code'}, {'value': 'dict'}, {'value': 'flask'}, {'value': 'turbo'}]
+
+-->
