@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
-from .forms import BlogPostModelForm
-from .models import Category, Tag, BlogPost
+from blog.forms import BlogPostModelForm
+from blog.models import Category, Tag, BlogPost
+import json
 
 
 @login_required(login_url="user:login_view")
@@ -14,7 +15,11 @@ def create_blog_post_view(request):
             f = form.save(commit=False)
             print(form.cleaned_data)
             f.user = request.user
+            f.save()
+            tags = json.loads(form.cleaned_data.get("tag"))
+            for item in tags:
+                tag_item, created = Tag.objects.get_or_create(title=item.get("value"))
+                f.tag.add(tag_item)
             # print(form.cleaned_data.get('tag'))
-            # f.save()
     context = dict(form=form)
     return render(request, "blog/create_blog_post.html", context)

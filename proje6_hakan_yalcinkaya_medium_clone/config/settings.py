@@ -44,6 +44,7 @@ THIRD_PARTY_APPS = [
     "crispy_forms",
     "crispy_bootstrap5",
     "tinymce",
+    "django_extensions",
 ]
 
 MY_APPS = [
@@ -187,7 +188,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: TinyMCE Kullanımı ve PostModelForm içindeki Bilgilerin Kaydedilmesi
 # TODO: proje6: blog yazilari icin form denetimlerine cesitli validatorler ekleme
 # TODO: proje6: tagifyjs ile form yapisina daha guzel bir sekilde tag ekleme yapisinin eklenmesi
-# TODO: proje6:
+# TODO: proje6: tag eklerken many-to-many ile form yapisinin olusturulmasi, django extensions kurulumu ve daha bir cok onemli islem.
 # TODO: proje6:
 # TODO: proje6:
 # TODO: proje6:
