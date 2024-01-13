@@ -23,6 +23,10 @@ from django.conf import settings
 urlpatterns = [
     path("", home_view, name="home_view"),
 
+    # READ:
+    path("read/", include("read.urls", namespace="read")),
+
+
     # BLOG:
     path("blog/", include("blog.urls", namespace="blog")),
     
