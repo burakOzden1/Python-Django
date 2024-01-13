@@ -101,3 +101,21 @@ SyntaxError: incomplete input
 [{'value': 'django'}, {'value': 'python'}, {'value': 'vs-code'}, {'value': 'dict'}, {'value': 'flask'}, {'value': 'turbo'}]
 
 -->
+
+
+
+
+
+
+
+
+
+<!--
+
+>>> from django.contrib.auth.models import User
+>>> from blog.models import BlogPost            
+>>> from blog.models import Tag           
+>>> Tag.objects.all().update(is_active=True)
+7
+
+-->

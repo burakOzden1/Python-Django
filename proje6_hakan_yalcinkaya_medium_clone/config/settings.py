@@ -202,6 +202,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: tag eklerken many-to-many ile form yapisinin olusturulmasi, django extensions kurulumu ve daha bir cok onemli islem.
 # TODO: proje6: formun kaydedilmesi ve messages framework kullanimi
 # TODO: proje6: easy-thumbnail eklenmesi ve blog yazilarinin ana sayfa da gorulmesi 
-# TODO: proje6:
+# TODO: proje6: model yapisina ordering eklenmesi ve anasayfa duzenlemeleri
 # TODO: proje6:
 # TODO: proje6:
