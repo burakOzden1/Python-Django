@@ -45,6 +45,7 @@ THIRD_PARTY_APPS = [
     "crispy_bootstrap5",
     "tinymce",
     "django_extensions",
+    'easy_thumbnails',
 ]
 
 MY_APPS = [
@@ -59,6 +60,16 @@ INSTALLED_APPS = BASE_APPS + THIRD_PARTY_APPS + MY_APPS
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
+
+
+THUMBNAIL_ALIASES = {
+    '': {
+        'avatar': {'size': (30, 30), 'crop': True},
+        'avatar2x': {'size': (60, 60), 'crop': True},
+        'thumbnail': {'size': (400, 300), 'crop': True},
+        'page': {'size': (800, 450), 'crop': True},
+    },
+}
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -190,7 +201,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: tagifyjs ile form yapisina daha guzel bir sekilde tag ekleme yapisinin eklenmesi
 # TODO: proje6: tag eklerken many-to-many ile form yapisinin olusturulmasi, django extensions kurulumu ve daha bir cok onemli islem.
 # TODO: proje6: formun kaydedilmesi ve messages framework kullanimi
-# TODO: proje6:
+# TODO: proje6: easy-thumbnail eklenmesi ve blog yazilarinin ana sayfa da gorulmesi 
 # TODO: proje6:
 # TODO: proje6:
 # TODO: proje6:
