@@ -207,7 +207,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: kullaniciya tum blog postslarin gosterilmesi
 # TODO: proje6: kullanici profiline get_absolute_url ile ulasilabilmesi
 # TODO: proje6: post detay sayfasinin olusturulmasi ve bircok onemli islem yapildi.
-# TODO: proje6:
+# TODO: proje6: renk ayari
 # TODO: proje6:
 # TODO: proje6:
 # TODO: proje6:
