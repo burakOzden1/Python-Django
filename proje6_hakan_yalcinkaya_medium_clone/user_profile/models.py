@@ -2,6 +2,8 @@ from django.urls import reverse
 from django.db import models
 from django.contrib.auth.models import User
 from autoslug import AutoSlugField
+from tinymce import models as tinymce_models
+
 
 
 class Profile(models.Model):
@@ -11,6 +13,7 @@ class Profile(models.Model):
     slug = models.SlugField(max_length=200) 
     # Sonradan admin panele bilgi ekleyebilmek icin oncelikle eklenecek bilginin parantezlerinin icerisine blank=True ifadesi eklenir,
     # makemigrations ve migrate islemleri yapilir, sonra unique=True ifadesi eklenerek tekrar makemigrations ve migrate yapilir.
+    info = tinymce_models.HTMLField(blank=True, null=True)
 
     def get_absolute_url(self):
         return reverse(

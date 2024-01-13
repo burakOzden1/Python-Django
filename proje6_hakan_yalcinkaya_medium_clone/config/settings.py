@@ -209,7 +209,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: post detay sayfasinin olusturulmasi ve bircok onemli islem yapildi.
 # TODO: proje6: renk ayari
 # TODO: proje6: url bilgilerinin duzeltilmesi ve with yapisinin template icinde kullanimi
-# TODO: proje6:
+# TODO: proje6: profil duzenleme sayfasinin form yapisi ile olusturulmasi ve daha bircok onemli islem.
 # TODO: proje6:
 # TODO: proje6:
 # TODO: proje6:

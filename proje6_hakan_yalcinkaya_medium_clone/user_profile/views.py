@@ -7,6 +7,18 @@ from django.contrib.auth.models import User
 from slugify import slugify
 
 from .models import Profile
+from .forms import ProfileModelForm
+
+@login_required(login_url='user:login_view')
+def profile_edit_view(request):
+    user = request.user
+    form = ProfileModelForm(instance=user.profile)
+    title = "Profili Düzenle :"
+    context = dict(
+        form=form,
+        title=title,
+    )
+    return render(request, "blog/form.html", context)
 
 
 def login_view(request):

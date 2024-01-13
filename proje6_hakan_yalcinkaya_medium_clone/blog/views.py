@@ -6,8 +6,9 @@ from django.contrib import messages
 import json
 
 
-@login_required(login_url="user:login_view")
+@login_required(login_url="user:login_view") # Burada kullanicinin login olup olmadigini kontrol ettik.
 def create_blog_post_view(request):
+    title = "Yeni Blog Post :"
     form = BlogPostModelForm()
     if request.method == "POST":
         # print(request.POST) # forma girdigimiz bilgileri terminal uzerinde gorduk.
@@ -26,8 +27,12 @@ def create_blog_post_view(request):
             # print(form.cleaned_data.get('tag'))
             messages.success(request, "Blog postunuz başarıyla kaydedildi.")
             return redirect('home_view')
-    context = dict(form=form)
-    return render(request, "blog/create_blog_post.html", context)
+        
+    context = dict(
+        form=form, 
+        title=title,
+    )
+    return render(request, "blog/form.html", context)
 
 def tag_view(request, tag_slug):
     tag = get_object_or_404(Tag, slug=tag_slug)
