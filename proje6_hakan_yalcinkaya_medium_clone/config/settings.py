@@ -68,7 +68,7 @@ THUMBNAIL_ALIASES = {
         'avatar': {'size': (30, 30), 'crop': True},
         'avatar2x': {'size': (60, 60), 'crop': True},
         'thumbnail': {'size': (400, 300), 'crop': True},
-        'page': {'size': (800, 450), 'crop': True},
+        'page': {'size': (1000, 300), 'crop': True},
     },
 }
 
@@ -206,7 +206,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: model yapisina ordering eklenmesi ve anasayfa duzenlemeleri
 # TODO: proje6: kullaniciya tum blog postslarin gosterilmesi
 # TODO: proje6: kullanici profiline get_absolute_url ile ulasilabilmesi
-# TODO: proje6:
+# TODO: proje6: post detay sayfasinin olusturulmasi ve bircok onemli islem yapildi.
 # TODO: proje6:
 # TODO: proje6:
 # TODO: proje6:
