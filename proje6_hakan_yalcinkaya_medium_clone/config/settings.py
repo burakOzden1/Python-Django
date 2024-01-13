@@ -174,9 +174,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: Sign Up *Avatar? Instagram? user_slug? / one_to_one / profile
 # TODO: Reset Password
 # TODO: User Avatar, Instagram Account, user_slug(first_name, last_name)
-# TODO: Blog App
-# TODO: Post(Login Olan Kullanici)
-# TODO: User Tag Olusturabilir *Kullanici tag bilgilerini virgul ile ayirarak gonderecek
+# DONE: Blog App
+# DONE: Post(Login Olan Kullanici)
+# DONE: User Tag Olusturabilir *Kullanici tag bilgilerini virgul ile ayirarak gonderecek
 # TODO: Populer olanlar/ En cok Okunanlar
 # TODO: User Fav
 # TODO: PAGE App Model Yapisi / Admin
@@ -208,7 +208,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: kullanici profiline get_absolute_url ile ulasilabilmesi
 # TODO: proje6: post detay sayfasinin olusturulmasi ve bircok onemli islem yapildi.
 # TODO: proje6: renk ayari
-# TODO: proje6:
+# TODO: proje6: url bilgilerinin duzeltilmesi ve with yapisinin template icinde kullanimi
 # TODO: proje6:
 # TODO: proje6:
 # TODO: proje6:
