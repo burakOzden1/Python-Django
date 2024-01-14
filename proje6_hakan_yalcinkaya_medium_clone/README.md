@@ -151,5 +151,27 @@ SyntaxError: incomplete input
 ...     item.save()
 ...
 >>> 
+# deneme yapmak adina 9 adet daha blog post olusturduk.
+-->
+
+
+
+
+
+
+<!--
+
+# python manage.py shell_plus eklentisi ile yaptik.
+
+
+>>> posts = BlogPost.objects.filter(is_active=True)
+>>> top_posts = posts.order_by('-view_count')[:6]
+>>> top_posts
+<QuerySet [<BlogPost: Django MVT Yapısı>, <BlogPost: Django ModelForm Yapısı>, <BlogPost: Django Extentions Kullanımı>, <BlogPost: django lorem>, <BlogPost: Django URL Namespace>, <BlogPost: Django Form Kullanımı>]>
+>>> top_posts.count()
+6
+>>>
+
+# En cok okunan postlari aldik ve siraladik.
 
 -->
