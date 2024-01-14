@@ -56,6 +56,15 @@ class BlogPost(CommonModel):
                 "post_slug": self.slug,
             },
         )
+    
+    def get_post_edit_url(self):
+        return reverse(
+            "blog:post_edit_view",
+            kwargs={
+                "post_slug": self.slug,
+            },
+        )
+
 
 
 class UserPostFav(models.Model):

@@ -218,7 +218,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: Axios - Fav Yapısının Oluşturulması ve View içinde Gelen Request-Post Bilgileri. JS kodlari
 # TODO: proje6: UserPostFav model yapisinin olusturulmasi ve alinan bilgilerin islenmesi.
 # TODO: proje6: user profile icerisinde favorilere eklenenlerin gosterilmesi. Onemli!!!
-# TODO: proje6:
+# TODO: proje6: kullaniciya ait blogpost bilgilerinin guncellenmesi. Burasida cok onemli!!!
 # TODO: proje6:
 # TODO: proje6:
 # TODO: proje6:
