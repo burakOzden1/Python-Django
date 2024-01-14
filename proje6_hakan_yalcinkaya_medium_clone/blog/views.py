@@ -2,14 +2,22 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from blog.forms import BlogPostModelForm
-from blog.models import Category, Tag, BlogPost
+from blog.models import Category, Tag, BlogPost, UserPostFav
 from django.contrib import messages
 import json
 
 @login_required(login_url="user:login_view")
 def fav_update_view(request):
     if request.method == 'POST':
-        print(request.POST)
+        post = get_object_or_404(BlogPost, slug=request.POST.get('slug'))
+        if post:
+            post_fav, created = UserPostFav.objects.get_or_create(
+                user = request.user,
+                post=post,
+            )
+            if not created:
+                post_fav.is_deleted = not post_fav.is_deleted
+                post_fav.save()
     return JsonResponse({"status": "OK"})
 
 
