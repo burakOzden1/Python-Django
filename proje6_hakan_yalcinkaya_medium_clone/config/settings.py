@@ -212,7 +212,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # TODO: proje6: profil duzenleme sayfasinin form yapisi ile olusturulmasi ve daha bircok onemli islem.
 # TODO: proje6: Profil Duzenleme Sayfasinin Form Duzenlemesi -Instance ve Initial Data Kullanimi
 # TODO: proje6: Navbar duzenlemesi ve profil Url bilgilerinin zenginlestirilmesi
-# TODO: proje6:
+# TODO: proje6: shell kullanarak kolay sekilde post olusturma.
 # TODO: proje6:
 # TODO: proje6:
 # TODO: proje6:

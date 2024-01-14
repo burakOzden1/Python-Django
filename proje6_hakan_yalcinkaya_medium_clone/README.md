@@ -119,3 +119,37 @@ SyntaxError: incomplete input
 7
 
 -->
+
+
+
+<!--
+# python manage.py shell_plus eklentisi ile yaptik.
+
+>>> titles = [
+...     'Django Form Kullanımı',
+...     'Django ModelForm Yapısı',
+...     'Django MVT Yapısı',
+...     'Django URL Namespace',
+...     'Django Template Language',
+...     'Django Extentions Kullanımı',
+...     'IPython',
+...     'Crispy Forms Kullanımı',
+...     'Easy Thumbnail Kullanımı',
+...
+... ]
+>>>
+>>> from random import randrange
+>>> randrange(10, 30)
+29
+>>> from slugify import slugify
+>>> item = BlogPost.objects.first()
+>>> for title in titles:
+...     item.pk = None
+...     item.title = title
+...     item.slug = slugify(title)
+...     item.view_count = randrange(10, 100)
+...     item.save()
+...
+>>> 
+
+-->
