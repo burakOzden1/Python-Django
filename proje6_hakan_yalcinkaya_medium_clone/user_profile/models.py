@@ -15,10 +15,13 @@ class Profile(models.Model):
     # makemigrations ve migrate islemleri yapilir, sonra unique=True ifadesi eklenerek tekrar makemigrations ve migrate yapilir.
     info = tinymce_models.HTMLField(blank=True, null=True)
 
-    def get_absolute_url(self):
+    def get_all_posts_url(self):
         return reverse(
             "read:all_posts_view",
             kwargs={
                 "user_slug": self.slug,
             },
         )
+    
+    def get_profile_edit_url(self):
+        return reverse("user:profile_edit_view",)
